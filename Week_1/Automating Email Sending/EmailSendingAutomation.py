@@ -42,8 +42,6 @@ def send_email(subject, receiver_email, attachments):
 
     msg.attach(attachment)
 
-
-
     with smtplib.SMTP_SSL(EMAIL_SERVER, PORT) as server:
         server.login(sender_email, password_email)
         server.sendmail(sender_email, receiver_email, msg.as_string())
