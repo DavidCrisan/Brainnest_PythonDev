@@ -189,7 +189,7 @@ update_btn.grid(row=1, column=3, sticky=EW, padx=(10, 0))
 del_btn.grid(row=2, column=3, sticky=EW, padx=(10, 0))
 
 # Treeview widget
-tv = ttk.Treeview(f2, columns=(1, 2, 3, 4), show='headings', height=8)
+tv = ttk.Treeview(f2, columns=(1, 2, 3, 4, 5, 6), show='headings', height=8)
 tv.pack(side="left")
 
 # add heading to treeview
@@ -197,10 +197,14 @@ tv.column(1, anchor=CENTER, stretch=NO, width=70)
 tv.column(2, anchor=CENTER)
 tv.column(3, anchor=CENTER)
 tv.column(4, anchor=CENTER)
+tv.column(5, anchor=CENTER)
+tv.column(6, anchor=CENTER)
 tv.heading(1, text="Serial no")
 tv.heading(2, text="Item Name", )
 tv.heading(3, text="Item Price")
 tv.heading(4, text="Purchase Date")
+tv.heading(5, text="Purchase Time")
+tv.heading(6, text="Budget")
 
 # binding treeview
 tv.bind("<ButtonRelease-1>", select_record)
