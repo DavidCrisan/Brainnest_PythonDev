@@ -166,3 +166,6 @@ poetry.toml
 
 # ruff
 .ruff_cache/
+
+config.py
+testing.py
